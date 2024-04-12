@@ -3,7 +3,7 @@ include('connect.php');
 
 $username= $_POST['username'];
 $mobile= $_POST['mobile'];
-$pasword= $_POST['password'];
+$password= $_POST['password'];
 $cpassword= $_POST['cpassword'];
 $image= $_FILES['photo']['name'];
 $tmp_name= $_FILES['photo']['tmp_name'];
@@ -11,7 +11,7 @@ $std= $_POST['std'];
 
 
 
-if($pasword!=$cpassword){
+if($password!=$cpassword){
     echo '<script>
     alert ("Passwords do not match");
     window.location = "../partials/registration.php";
@@ -31,6 +31,8 @@ else{
         </script>';
     
 
+    }else{
+        die("Connection failed: " . mysqli_connect_error());
     }
 }
 

@@ -13,7 +13,7 @@
     <div class="bg-info py-4">
         <h2  class="text-center">Login</h2>
         <div class="container text-center">
-            <form action="">
+            <form action="./actions/login.php"  method="POST">
 
             <!-- Username Input Field-->
                 <div class="mb-3">
@@ -36,6 +36,7 @@
                 <select name="std"   class="form-select w-50 m-auto" >
                     <option value="group">Group</option>
                     <option value="single voter">Single Voter</option>
+                    <option value="poll creator">Poll Creator</option>
                 </select>
             </div>
 
